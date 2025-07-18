@@ -1,0 +1,18 @@
+@mixin trn {
+  transition: all .3s;
+}
+
+@mixin bg-dark {
+  background-color: #030303;
+}
+
+@mixin dark-red {
+  background-color : #710707;
+}
+
+@mixin font-gold {
+  color: #9d8665;
+}
+@mixin active-gold {
+  color: #7E6C51 ;
+} 
