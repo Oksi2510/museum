@@ -465,7 +465,8 @@ html {
     height: 2200px;
     overflow: hidden;
     position: relative;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       bottom: 0;
@@ -501,4 +502,180 @@ html {
   &__colum-three {
     margin-top: 125px;
   }
+}
+
+// ===============================TICKETS==============================================
+.tickets {
+
+  &__inner {
+    padding: 75px 0;
+  }
+
+  &__heading {
+    &-line {}
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__img-box {
+    margin-right: 60px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+    &-type {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    &-amount {
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: right;
+
+    }
+
+    &-total {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1.65px;
+      text-align: right;
+      margin-top: 40px;
+    }
+
+    &-cost {}
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+
+    &-cont {
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 25px;
+
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-checkmark {
+      margin-right: 25px;
+    }
+  }
+
+  &__amount {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__count-box {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #000;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+
+  &__count-label {
+    margin-bottom: 15px;
+    margin-left: 25px;
+  }
+
+  &__number {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0;
+    width: 50px;
+    -moz-appearance: textfield;
+  }
+
+  &__btn-minus {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    width: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 1px solid #000;
+      width: 16px;
+      height: 0;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btn-plus {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    width: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 1px solid #000;
+      width: 16px;
+      height: 0;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 1px solid #000;
+      width: 0;
+      height: 16px;
+      top: 50%;
+      right: 22px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+    width: 175px;
+    height: 50px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 0 38px;
+    text-wrap: nowrap;
+    border-radius: 2px;
+    @include trn;
+
+    &:hover {
+      @include bg-gold;
+      color: #000;
+    }
+  }
+}
+
+.tickets__number::-webkit-inner-spin-button,
+.tickets__number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -527,4 +527,146 @@ html {
   margin-top: 125px;
 }
 
+.tickets__inner {
+  padding: 75px 0;
+}
+.tickets__content {
+  display: flex;
+}
+.tickets__img-box {
+  margin-right: 60px;
+}
+.tickets__form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.tickets__form-type {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.tickets__form-amount {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: right;
+}
+.tickets__form-total {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+  text-align: right;
+  margin-top: 40px;
+}
+.tickets__type {
+  display: flex;
+  flex-direction: column;
+}
+.tickets__type-cont {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.tickets__type-cont:last-child {
+  margin-bottom: 0;
+}
+.tickets__type-checkmark {
+  margin-right: 25px;
+}
+.tickets__amount {
+  display: flex;
+  flex-direction: column;
+}
+.tickets__count-box {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #000;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+.tickets__count-label {
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.tickets__number {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0;
+  width: 50px;
+  -moz-appearance: textfield;
+}
+.tickets__btn-minus {
+  background-color: transparent;
+  position: relative;
+  display: block;
+  width: 50px;
+}
+.tickets__btn-minus::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid #000;
+  width: 16px;
+  height: 0;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.tickets__btn-plus {
+  background-color: transparent;
+  position: relative;
+  display: block;
+  width: 50px;
+}
+.tickets__btn-plus::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid #000;
+  width: 16px;
+  height: 0;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.tickets__btn-plus::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid #000;
+  width: 0;
+  height: 16px;
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%);
+}
+.tickets__button {
+  margin-top: 60px;
+  width: 175px;
+  height: 50px;
+  background-color: #000;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 0 38px;
+  text-wrap: nowrap;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.tickets__button:hover {
+  background-color: #9D8665;
+  color: #000;
+}
+
+.tickets__number::-webkit-inner-spin-button,
+.tickets__number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /*# sourceMappingURL=main.css.map */
