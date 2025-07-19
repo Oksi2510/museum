@@ -29,14 +29,18 @@ html {
   }
 
   &__logo {
-    color: #FFF;
-    font-family: Forum;
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    display: flex;
     margin: auto 0;
+    display: flex;
+
+    & h1 {
+      color: #FFF;
+      font-family: Forum;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-right: 30px;
+    }
 
     & svg {
       margin-right: 25px;
@@ -63,7 +67,17 @@ html {
       }
     }
 
-    &-link {}
+    &-link {
+      @include trn;
+
+      &:hover {
+        @include font-gold;
+      }
+
+      &--active {
+        @include active-gold;
+      }
+    }
   }
 }
 
@@ -109,11 +123,14 @@ html {
       font-size: 22px;
       font-weight: 300;
       letter-spacing: 2px;
-
       padding: 24.17px 64px;
       @include dark-red;
       border-radius: 10px;
+      @include trn;
 
+      &:hover {
+        @include bg-gold;
+      }
     }
   }
 
@@ -142,8 +159,8 @@ html {
       align-items: center;
       position: absolute;
       right: 0;
-      bottom: 0;
-      width: 700px;
+      bottom: -60px;
+      width: 600px;
       height: 120px;
       @include bg-dark;
       padding: 0 75px;
@@ -155,7 +172,21 @@ html {
       width: 12px;
       background-color: #FFF;
       margin-right: 25px;
-      & a{
+      @include trn;
+
+      & a {
+        @include trn;
+      }
+
+      :hover {
+        @include bg-gold;
+      }
+
+      &--active {
+        @include bg-active-gold
+      }
+
+      & a {
         display: block;
         width: 100%;
         height: 100%;
@@ -174,7 +205,7 @@ html {
       font-weight: 400;
       line-height: 40px;
       text-transform: uppercase;
-      margin-right: 45px;
+      margin: 0 50px 0 5px;
       align-items: center;
 
       & span {
@@ -195,8 +226,14 @@ html {
       margin-left: 20px;
     }
 
+    &-arrow--prev svg path,
+    &-arrow--next svg path {
+      @include trn;
+    }
+
+    &-arrow--prev:hover svg path,
+    &-arrow--next:hover svg path {
+      fill: #9D8665;
+    }
   }
-
-
-
 }

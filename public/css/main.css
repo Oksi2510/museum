@@ -140,14 +140,17 @@ html {
   height: 150px;
 }
 .header__logo {
+  margin: auto 0;
+  display: flex;
+}
+.header__logo h1 {
   color: #FFF;
   font-family: Forum;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
-  display: flex;
-  margin: auto 0;
+  margin-right: 30px;
 }
 .header__logo svg {
   margin-right: 25px;
@@ -168,6 +171,16 @@ html {
 .header__nav-item:last-child {
   margin-right: 0;
 }
+.header__nav-link {
+  transition: all 0.3s;
+}
+.header__nav-link:hover {
+  color: #9d8665;
+}
+.header__nav-link--active {
+  color: #7E6C51;
+}
+
 .welcome {
   background-color: #030303;
   padding: 0 0 60px 0;
@@ -208,6 +221,10 @@ html {
   padding: 24.17px 64px;
   background-color: #710707;
   border-radius: 10px;
+  transition: all 0.3s;
+}
+.welcome__box-btn:hover {
+  background-color: #9D8665;
 }
 .welcome__slider {
   display: flex;
@@ -231,8 +248,8 @@ html {
   align-items: center;
   position: absolute;
   right: 0;
-  bottom: 0;
-  width: 700px;
+  bottom: -60px;
+  width: 600px;
   height: 120px;
   background-color: #030303;
   padding: 0 75px;
@@ -243,6 +260,16 @@ html {
   width: 12px;
   background-color: #FFF;
   margin-right: 25px;
+  transition: all 0.3s;
+}
+.welcome__slider-dot a {
+  transition: all 0.3s;
+}
+.welcome__slider-dot :hover {
+  background-color: #9D8665;
+}
+.welcome__slider-dot--active {
+  background-color: #D2B183;
 }
 .welcome__slider-dot a {
   display: block;
@@ -260,7 +287,7 @@ html {
   font-weight: 400;
   line-height: 40px;
   text-transform: uppercase;
-  margin-right: 45px;
+  margin: 0 50px 0 5px;
   align-items: center;
 }
 .welcome__slider-num span {
@@ -276,6 +303,12 @@ html {
 .welcome__slider-arrow--next svg {
   transform: rotate(180deg);
   margin-left: 20px;
+}
+.welcome__slider-arrow--prev svg path, .welcome__slider-arrow--next svg path {
+  transition: all 0.3s;
+}
+.welcome__slider-arrow--prev:hover svg path, .welcome__slider-arrow--next:hover svg path {
+  fill: #9D8665;
 }
 
 /*# sourceMappingURL=main.css.map */
