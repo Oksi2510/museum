@@ -150,6 +150,7 @@ html {
   width: 100%;
   height: 0;
   border: 1px solid #710707;
+  margin: 25px 0 75px 0;
 }
 
 .header {
@@ -335,12 +336,6 @@ html {
 .visiting {
   padding: 75px 0;
 }
-.visiting__heading {
-  margin-bottom: 25px;
-}
-.visiting__heading-line {
-  margin-bottom: 75px;
-}
 .visiting__cards {
   display: grid;
   grid-template-columns: repeat(3, 440px);
@@ -377,6 +372,7 @@ html {
 }
 .visiting__card-info:last-of-type {
   margin: 0;
+  font-size: 18px;
 }
 .visiting__card-link {
   display: block;
@@ -385,6 +381,32 @@ html {
 }
 .visiting__card-link:hover .visiting__card-heading-line {
   width: 100%;
+}
+
+.explore {
+  background-color: #030303;
+  padding: 75px 0;
+}
+.explore__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.explore__content {
+  width: 660px;
+}
+.explore__text {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 38.5px;
+  margin-bottom: 25px;
+}
+.explore__text:last-of-type {
+  margin-bottom: 0;
+}
+.explore__text span {
+  color: #CAAA7D;
 }
 
 /*# sourceMappingURL=main.css.map */
