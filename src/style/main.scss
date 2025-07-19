@@ -336,10 +336,6 @@ html {
     width: 660px;
   }
 
-  &__heading {}
-
-  &__heading-line {}
-
   &__text {
     color: #FFF;
     font-family: Roboto;
@@ -356,6 +352,109 @@ html {
       color: #CAAA7D;
     }
   }
+}
 
-  &__img-box {}
+// ===============================VIDEO==============================================
+.video {
+  padding: 75px 0;
+
+  &__inner {}
+
+  &__heading {
+    &-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 75px;
+    }
+
+    &-text {
+      width: 720px;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 38.5px;
+    }
+  }
+
+  &__slider {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 452px);
+    grid-template-rows: 2;
+    row-gap: 40px;
+
+    &-item {
+      &--none {
+        display: none;
+      }
+
+      &:first-child {
+        grid-column: span 3;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    &-arrow--prev {
+      margin: 10px;
+
+      &:hover svg path {
+        fill: #710707;
+      }
+
+      & svg {
+        transform: rotate(180deg);
+
+        & path {
+          @include trn;
+        }
+      }
+    }
+
+    &-arrow--next {
+      margin: 10px;
+
+      &:hover svg path {
+        fill: #710707;
+      }
+
+      & svg path {
+        @include trn;
+      }
+    }
+
+    &-dots {
+      display: inline-flex;
+    }
+  }
+
+  &__dot {
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin: 10px;
+    @include trn;
+
+    &:hover {
+      @include dark-red;
+    }
+
+    &--active {
+      background-color: #333333;
+    }
+
+    &-link {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
 }
