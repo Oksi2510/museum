@@ -1,0 +1,24 @@
+{
+  "name": "oksi2510-jsfepreschool2025q2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/style:public/css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/oksi2510-JSFEPRESCHOOL2025Q2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/oksi2510-JSFEPRESCHOOL2025Q2/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/oksi2510-JSFEPRESCHOOL2025Q2#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
