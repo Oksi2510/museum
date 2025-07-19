@@ -488,4 +488,43 @@ html {
   width: 100%;
 }
 
+.gallery {
+  background-color: #030303;
+}
+.gallery__inner {
+  padding-top: 75px;
+  height: 2200px;
+  overflow: hidden;
+  position: relative;
+}
+.gallery__inner::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 360px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+.gallery__box {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery__colum-one {
+  margin-top: 125px;
+}
+.gallery__immage {
+  margin-bottom: 24px;
+}
+.gallery__immage:last-child {
+  margin-bottom: 0;
+}
+.gallery__colum-two {
+  margin-top: 75px;
+}
+.gallery__colum-three {
+  margin-top: 125px;
+}
+
 /*# sourceMappingURL=main.css.map */
