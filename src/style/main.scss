@@ -18,6 +18,27 @@ html {
   height: 100%;
 }
 
+.hrading {
+  color: #FFF;
+  font-family: Forum;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.heading--gold {
+  color: #9D8665;
+}
+
+.heading-line {
+  display: block;
+  width: 100%;
+  height: 0;
+  border: 1px solid #710707;
+}
+
 // ===============================HEADER==============================================
 .header {
   @include bg-dark;
@@ -234,6 +255,77 @@ html {
     &-arrow--prev:hover svg path,
     &-arrow--next:hover svg path {
       fill: #9D8665;
+    }
+  }
+}
+
+// ===============================VISITING==============================================
+.visiting {
+  padding: 75px 0;
+
+  &__inner {}
+
+  &__heading {
+    margin-bottom: 25px;
+  }
+
+  &__heading-line {
+    margin-bottom: 75px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 440px);
+    grid-template-rows: 2;
+    justify-content: space-between;
+    row-gap: 75px;
+  }
+
+  &__img-box {
+    margin-bottom: 25px;
+  }
+
+  &__card {
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-heading {
+      font-family: Forum;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      &-line {
+        display: block;
+        width: 300px;
+        border: 1px solid #710707;
+        margin: 10px 0;
+        @include trn;
+      }
+    }
+
+    &-info {
+      font-family: Roboto;
+      font-size: 22px;
+      font-weight: 200;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &-link {
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      &:hover .visiting__card-heading-line {
+        width: 100%;
+      }
     }
   }
 }
