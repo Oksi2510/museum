@@ -713,4 +713,87 @@ html {
   color: #9d8665;
 }
 
+.footer__top {
+  background-color: #030303;
+}
+.footer__top-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 85px 0 50px;
+}
+.footer__logo-link {
+  color: #FFF;
+  font-family: Forum;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.footer__logo-link svg {
+  margin-right: 25px;
+}
+.footer__nav {
+  margin: 0 auto 0 145px;
+}
+.footer__nav-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 150px;
+  row-gap: 25px;
+}
+.footer__nav-item {
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+.footer__nav-item:hover {
+  color: #9d8665;
+}
+.footer__social-list {
+  display: flex;
+  align-items: flex-end;
+}
+.footer__social-item {
+  margin-right: 25px;
+}
+.footer__social-item:last-child {
+  margin-right: 0;
+}
+.footer__social-link svg path {
+  transition: all 0.3s;
+}
+.footer__social-link:hover svg path {
+  fill: #9D8665;
+}
+.footer__social-link svg rect {
+  transition: all 0.3s;
+}
+.footer__social-link:hover svg rect {
+  stroke: #9D8665;
+}
+.footer__bottom {
+  background-color: #030303;
+}
+.footer__bottom-inner {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 22px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.footer__line {
+  display: block;
+  width: 100%;
+  height: 0;
+  border: 1px solid #666;
+}
+
 /*# sourceMappingURL=main.css.map */

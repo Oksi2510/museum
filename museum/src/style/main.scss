@@ -730,3 +730,106 @@ html {
 }
 
 // ===============================FOOTER==============================================
+.footer {
+  &__top {
+    @include bg-dark;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 85px 0 50px;
+    }
+  }
+
+  &__logo-link {
+    color: #FFF;
+    font-family: Forum;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    & svg {
+      margin-right: 25px;
+    }
+  }
+
+  &__nav {
+    margin: 0 auto 0 145px;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 150px;
+      row-gap: 25px;
+    }
+
+    &-item {
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      @include trn;
+
+      &:hover {
+        @include font-gold;
+      }
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__social-item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__social-link {
+    & svg path {
+      @include trn;
+    }
+
+    &:hover svg path {
+      fill: #9D8665;
+    }
+
+    & svg rect {
+      @include trn;
+    }
+
+    &:hover svg rect {
+      stroke: #9D8665;
+    }
+  }
+
+  &__bottom {
+    @include bg-dark;
+
+    &-inner {
+      color: #FFF;
+      font-family: Roboto;
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 22px;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 0;
+    border: 1px solid #666;
+  }
+}
