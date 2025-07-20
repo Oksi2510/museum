@@ -511,9 +511,6 @@ html {
     padding: 75px 0;
   }
 
-  &__heading {
-  }
-
   &__content {
     display: flex;
   }
@@ -619,6 +616,7 @@ html {
       transform: translateY(-50%);
     }
   }
+
   &__btn-plus {
     background-color: transparent;
     position: relative;
@@ -676,3 +674,59 @@ html {
   -webkit-appearance: none;
   margin: 0;
 }
+
+// ===============================TICKETS==============================================
+.parallax {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background: url("../../src/images/parallax/parallax.jpg") 50% 50% / cover no-repeat fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+// ===============================CONTACTS==============================================
+.contacts {
+  padding: 75px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &-heading {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 50px;
+      width: 225px;
+    }
+  }
+
+  &__list {
+    font-size: 22px;
+    font-weight: 300;
+
+    &-item {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      @include trn;
+
+      &:hover {
+        @include font-gold;
+      }
+    }
+  }
+}
+
+// ===============================FOOTER==============================================

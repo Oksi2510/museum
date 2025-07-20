@@ -669,4 +669,48 @@ html {
   margin: 0;
 }
 
+.parallax {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+.parallax::before {
+  content: "";
+  background: url("../../src/images/parallax/parallax.jpg") 50% 50%/cover no-repeat fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.contacts {
+  padding: 75px 0;
+}
+.contacts__content {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__content-heading {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  width: 225px;
+}
+.contacts__list {
+  font-size: 22px;
+  font-weight: 300;
+}
+.contacts__list-item {
+  margin-bottom: 25px;
+}
+.contacts__list-item:last-child {
+  margin-bottom: 0;
+}
+.contacts__list-link {
+  transition: all 0.3s;
+}
+.contacts__list-link:hover {
+  color: #9d8665;
+}
+
 /*# sourceMappingURL=main.css.map */
