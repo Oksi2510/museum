@@ -23,7 +23,7 @@ html {
   font-family: Forum;
   font-size: 80px;
   font-weight: 400;
-  line-height: 90px;
+  line-height: 89px;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
@@ -53,6 +53,8 @@ html {
   &__logo {
     margin: auto 0;
     display: flex;
+    align-items: end;
+
 
     & h1 {
       color: #FFF;
@@ -140,12 +142,13 @@ html {
     }
 
     &-btn {
+      color: #FFF;
       display: inline-block;
       font-family: Roboto;
       font-size: 22px;
       font-weight: 300;
       letter-spacing: 2px;
-      padding: 24.17px 64px;
+      padding: 23px 66px;
       @include dark-red;
       border-radius: 10px;
       @include trn;
@@ -185,13 +188,18 @@ html {
       width: 600px;
       height: 120px;
       @include bg-dark;
-      padding: 0 75px;
+    }
+
+    &-dots {
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
 
     &-dot {
       display: inline-block;
-      height: 12px;
-      width: 12px;
+      height: 16px;
+      width: 16px;
       background-color: #FFF;
       margin-right: 25px;
       @include trn;
@@ -223,29 +231,39 @@ html {
       display: flex;
       color: #FFF;
       font-family: Roboto;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 400;
       line-height: 40px;
       text-transform: uppercase;
-      margin: 0 50px 0 5px;
+      margin: 0 55px 0 75px;
       align-items: center;
 
       & span {
         display: inline-block;
-        height: 15px;
+        height: 20px;
         width: 0;
         border: 1px solid #fff;
-        margin: 0 10px;
+        margin: 0 12px;
       }
     }
 
-    &-arrow--prev svg {
+    &-arrow--prev {
+      display: flex;
+      height: 100%;
+      align-items: center;
       margin-left: 60px;
+
     }
 
-    &-arrow--next svg {
-      transform: rotate(180deg);
+    &-arrow--next {
+      display: flex;
+      height: 100%;
+      align-items: center;
       margin-left: 20px;
+
+      & svg {
+        transform: rotate(180deg);
+      }
     }
 
     &-arrow--prev svg path,
@@ -352,11 +370,15 @@ html {
       color: #CAAA7D;
     }
   }
+
+  &__img-box {
+    margin-top: 15px;
+  }
 }
 
 // ===============================VIDEO==============================================
 .video {
-  padding: 75px 0;
+  padding: 75px 0 63px;
 
   &__heading {
     &-box {
@@ -379,7 +401,7 @@ html {
     justify-content: space-between;
     grid-template-columns: repeat(3, 452px);
     grid-template-rows: 2;
-    row-gap: 40px;
+    row-gap: 35px;
 
     &-item {
       &--none {
@@ -395,7 +417,7 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 40px;
+      margin-top: 22px;
     }
 
     &-arrow--prev {
@@ -511,9 +533,6 @@ html {
     padding: 75px 0;
   }
 
-  &__heading {
-  }
-
   &__content {
     display: flex;
   }
@@ -590,6 +609,8 @@ html {
   &__count-label {
     margin-bottom: 15px;
     margin-left: 25px;
+    font-size: 22px;
+    font-weight: 300;
   }
 
   &__number {
@@ -619,6 +640,7 @@ html {
       transform: translateY(-50%);
     }
   }
+
   &__btn-plus {
     background-color: transparent;
     position: relative;
@@ -675,4 +697,162 @@ html {
 .tickets__number::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+// ===============================TICKETS==============================================
+.parallax {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background: url("../../src/images/parallax/parallax.jpg") 50% 50% / cover no-repeat fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+// ===============================CONTACTS==============================================
+.contacts {
+  padding: 75px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &-heading {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 50px;
+      width: 225px;
+    }
+  }
+
+  &__list {
+    font-size: 22px;
+    font-weight: 300;
+
+    &-item {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      @include trn;
+
+      &:hover {
+        @include font-gold;
+      }
+    }
+  }
+}
+
+// ===============================FOOTER==============================================
+.footer {
+  &__top {
+    @include bg-dark;
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 85px 0 50px;
+    }
+  }
+
+  &__logo-link {
+    color: #FFF;
+    font-family: Forum;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    & svg {
+      margin-right: 25px;
+    }
+  }
+
+  &__nav {
+    margin: 0 auto 0 145px;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 169px;
+      row-gap: 25px;
+    }
+
+    &-item {
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      @include trn;
+
+      &:hover {
+        @include font-gold;
+      }
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__social-item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__social-link {
+    & svg path {
+      @include trn;
+    }
+
+    &:hover svg path {
+      fill: #9D8665;
+    }
+
+    & svg rect {
+      @include trn;
+    }
+
+    &:hover svg rect {
+      stroke: #9D8665;
+    }
+  }
+
+  &__bottom {
+    @include bg-dark;
+
+    &-inner {
+      color: #FFF;
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 22px;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 0;
+    border: 1px solid #666;
+  }
 }
