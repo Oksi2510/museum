@@ -202,9 +202,10 @@ html {
       width: 16px;
       background-color: #FFF;
       margin-right: 25px;
+      align-items: center;
       @include trn;
 
-      & a {
+      & button {
         @include trn;
       }
 
@@ -216,10 +217,11 @@ html {
         @include bg-active-gold
       }
 
-      & a {
+      & button {
         display: block;
         width: 100%;
         height: 100%;
+        background-color: transparent;
       }
 
       &:last-child {
@@ -252,6 +254,7 @@ html {
       height: 100%;
       align-items: center;
       margin-left: 60px;
+      background-color: transparent;
 
     }
 
@@ -260,6 +263,7 @@ html {
       height: 100%;
       align-items: center;
       margin-left: 20px;
+      background-color: transparent;
 
       & svg {
         transform: rotate(180deg);
@@ -417,11 +421,13 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 22px;
+      margin-top: 27px;
     }
 
     &-arrow--prev {
-      margin: 10px;
+      height: 32px;
+      width: 32px;
+      background-color: transparent;
 
       &:hover svg path {
         fill: #710707;
@@ -437,7 +443,9 @@ html {
     }
 
     &-arrow--next {
-      margin: 10px;
+      height: 32px;
+      width: 32px;
+      background-color: transparent;
 
       &:hover svg path {
         fill: #710707;
@@ -450,6 +458,7 @@ html {
 
     &-dots {
       display: inline-flex;
+      // margin: 0 10px;
     }
   }
 
@@ -470,10 +479,11 @@ html {
       background-color: #333333;
     }
 
-    &-link {
+    &-btn {
       display: block;
-      height: 100%;
-      width: 100%;
+      height: 32px;
+      width: 32px;
+      background-color: transparent;
     }
   }
 }
@@ -483,7 +493,7 @@ html {
   @include bg-dark;
 
   &__inner {
-    padding-top: 75px;
+    padding-top: 77px;
     height: 2200px;
     overflow: hidden;
     position: relative;
@@ -507,6 +517,11 @@ html {
 
   &__colum-one {
     margin-top: 125px;
+    width: 456px;
+
+    & li img {
+      width: 100%;
+    }
   }
 
   &__immage {
@@ -519,10 +534,20 @@ html {
 
   &__colum-two {
     margin-top: 75px;
+    width: 456px;
+
+    & li img {
+      width: 100%;
+    }
   }
 
   &__colum-three {
     margin-top: 125px;
+    width: 456px;
+
+    & li img {
+      width: 100%;
+    }
   }
 }
 
@@ -530,7 +555,7 @@ html {
 .tickets {
 
   &__inner {
-    padding: 75px 0;
+    padding: 77px 0;
   }
 
   &__content {
@@ -538,7 +563,7 @@ html {
   }
 
   &__img-box {
-    margin-right: 60px;
+    margin-right: 62px;
   }
 
   &__form {
@@ -578,8 +603,12 @@ html {
     &-cont {
       font-size: 22px;
       font-weight: 300;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
 
+      & input {
+        transform: scale(1.3);
+        accent-color: #000;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -587,7 +616,7 @@ html {
     }
 
     &-checkmark {
-      margin-right: 25px;
+      margin-right: 20px;
     }
   }
 
@@ -602,7 +631,7 @@ html {
     border: 3px solid #000;
     width: 150px;
     height: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     align-self: flex-end;
   }
 
@@ -627,6 +656,11 @@ html {
     position: relative;
     display: block;
     width: 50px;
+    @include trn;
+
+    &:hover {
+      @include bg-gold;
+    }
 
     &::after {
       content: "";
@@ -636,7 +670,7 @@ html {
       width: 16px;
       height: 0;
       top: 50%;
-      left: 15px;
+      left: 12px;
       transform: translateY(-50%);
     }
   }
@@ -646,6 +680,11 @@ html {
     position: relative;
     display: block;
     width: 50px;
+    @include trn;
+
+    &:hover {
+      @include bg-gold;
+    }
 
     &::after {
       content: "";
@@ -655,7 +694,7 @@ html {
       width: 16px;
       height: 0;
       top: 50%;
-      right: 15px;
+      right: 13px;
       transform: translateY(-50%);
     }
 
@@ -667,7 +706,7 @@ html {
       width: 0;
       height: 16px;
       top: 50%;
-      right: 22px;
+      right: 20px;
       transform: translateY(-50%);
     }
   }
@@ -736,7 +775,7 @@ html {
     font-weight: 300;
 
     &-item {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
 
       &:last-child {
         margin-bottom: 0;
@@ -781,7 +820,7 @@ html {
   }
 
   &__nav {
-    margin: 0 auto 0 145px;
+    margin: 0 auto 0 142px;
 
     &-list {
       display: grid;
@@ -806,10 +845,25 @@ html {
   &__social-list {
     display: flex;
     align-items: flex-end;
+    margin-bottom: 7px;
+
   }
 
   &__social-item {
-    margin-right: 25px;
+    margin-right: 28px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    @include trn;
+
+    &:hover, svg path {
+    border: 2px solid #9D8665;
+    }
+    &:hover a svg path {
+      fill: #9D8665;
+    }
+
 
     &:last-child {
       margin-right: 0;
@@ -817,21 +871,19 @@ html {
   }
 
   &__social-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
     & svg path {
       @include trn;
     }
 
-    &:hover svg path {
-      fill: #9D8665;
-    }
 
-    & svg rect {
-      @include trn;
-    }
-
-    &:hover svg rect {
-      stroke: #9D8665;
-    }
   }
 
   &__bottom {
