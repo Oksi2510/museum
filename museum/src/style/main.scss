@@ -12,8 +12,8 @@ html {
 }
 
 .container {
-  max-width: 1470px;
-  padding: 0 15px;
+  max-width: 1480px;
+  padding: 0 20px;
   margin: 0 auto;
   height: 100%;
 }
@@ -43,6 +43,7 @@ html {
 // ===============================HEADER==============================================
 .header {
   @include bg-dark;
+  position: relative;
 
   &__inner {
     display: flex;
@@ -85,6 +86,7 @@ html {
       font-weight: 200;
       letter-spacing: 2px;
       margin-right: 55px;
+      width: 100%;
 
       &:last-child {
         margin-right: 0;
@@ -93,6 +95,9 @@ html {
 
     &-link {
       @include trn;
+      display: block;
+      position: relative;
+      width: 100%;
 
       &:hover {
         @include font-gold;
@@ -163,8 +168,10 @@ html {
     display: flex;
     justify-content: end;
 
+
     &-item {
       position: relative;
+
 
       &::before {
         content: "";
@@ -172,6 +179,8 @@ html {
         height: 100%;
         width: 100%;
         background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.50) 16.19%, rgba(0, 0, 0, 0.00) 30.73%);
+
+
       }
 
       &--none {
@@ -857,9 +866,11 @@ html {
     border-radius: 50%;
     @include trn;
 
-    &:hover, svg path {
-    border: 2px solid #9D8665;
+    &:hover,
+    svg path {
+      border: 2px solid #9D8665;
     }
+
     &:hover a svg path {
       fill: #9D8665;
     }
@@ -877,7 +888,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
     & svg path {
       @include trn;
@@ -908,3 +919,144 @@ html {
     border: 1px solid #666;
   }
 }
+
+// ===============================HEADER==============================================
+// ===============================1100px==============================================
+@media (max-width: 1100px) {
+
+  .header__nav {
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: -500px;
+    height: 585px;
+    width: 177px;
+    z-index: 10;
+    @include bg-dark;
+  }
+
+  // .header__nav--open {
+  //   left: 0;
+  // }
+
+  .header__nav-list {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+
+  .header__nav-item {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    padding-left: 55px;
+  }
+
+  .header__nav-link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    transform: rotate(45deg);
+    right: 0;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    border-color: #fff;
+    border-radius: 1px;
+    width: 9px;
+    height: 9px;
+    margin: auto 0;
+    @include trn;
+  }
+
+  .header__nav-link:hover::after {
+    border-color: #9d8665;
+  }
+
+  .header__burger {
+    background-color: transparent;
+    padding-left: 30px;
+  }
+
+
+  .header__burger-line {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: auto 0;
+    position: relative;
+    @include trn;
+  }
+
+  .header__burger-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    @include trn;
+  }
+
+  .header__burger-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    @include trn;
+  }
+
+  .header__burger:hover .header__burger-line,
+  .header__burger:hover .header__burger-line::after,
+  .header__burger:hover .header__burger-line::before {
+    @include bg-gold;
+  }
+
+}
+
+// ===============================WELCOME==============================================
+// ===============================1100px==============================================
+
+@media (max-width: 1100px) {
+  .welcome__slider-item img {
+    width: 700px;
+  }
+
+  .welcome__slider-info {
+    width: 700px;
+  }
+
+  // .welcome__box--none {
+  //   display: none;
+  // }
+  .welcome__box {
+    top: 50px;
+  }
+
+  .welcome__box-heading {
+    font-size: 50px;
+    line-height: 90px;
+  }
+
+  .welcome__box-text {
+    font-size: 24px;
+  }
+
+  .welcome__slider-info {
+    justify-content: flex-end;
+    padding: 0 75px;
+  }
+
+  .welcome__box-btn {
+    padding: 17px 37px;
+  }
+}
+// ===============================VISITING==============================================
+// ===============================1100px==============================================
