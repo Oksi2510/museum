@@ -532,10 +532,11 @@ html {
 
 // ===============================GALLERY==============================================
 .gallery {
+  padding-top: 77px;
   @include bg-dark;
 
   &__inner {
-    padding-top: 77px;
+    // padding-top: 77px;
     height: 2200px;
     overflow: hidden;
     position: relative;
@@ -564,7 +565,7 @@ html {
     margin-top: 75px;
     column-gap: 36px;
 
-    & li:nth-of-type(1) ,
+    & li:nth-of-type(1),
     & li:nth-of-type(11) {
       padding-top: 50px;
     }
@@ -978,9 +979,9 @@ html {
     @include bg-dark;
   }
 
-  // .header__nav--open {
-  //   left: 0;
-  // }
+  .header__inner {
+    height: 130px;
+  }
 
   .header__nav-list {
     flex-direction: column;
@@ -1089,6 +1090,7 @@ html {
 
   .welcome__box-text {
     font-size: 24px;
+    margin-bottom: 50px;
   }
 
   .welcome__slider-info {
@@ -1096,8 +1098,27 @@ html {
     padding: 0 75px;
   }
 
+  .welcome__slider-num {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0 45px 0 0;
+  }
+
+  .welcome__slider-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .welcome__slider-arrow--prev {
+    margin-left: 45px;
+  }
+
   .welcome__box-btn {
-    padding: 17px 37px;
+    padding: 17px 45px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
   }
 }
 
@@ -1110,8 +1131,10 @@ html {
 
   .visiting__cards {
     grid-template-columns: repeat(2, 330px);
-    row-gap: 60px;
+    row-gap: 64px;
     justify-content: space-around;
+    column-gap: 108px;
+    padding: 0 108px;
   }
 
   .visiting__card-heading-line {
@@ -1146,6 +1169,7 @@ html {
 
   .explore__content {
     width: 100%;
+    margin-bottom: 41px;
   }
 
   .explore__text {
@@ -1164,11 +1188,15 @@ html {
   }
 }
 
-// ===============================VIDEO ==============================================
+// ===============================VIDEO==============================================
 // ===============================1100px==============================================
 @media (max-width: 1100px) {
   .video {
-    padding: 60px 0;
+    padding: 60px 0 50px;
+  }
+
+  .video__heading-box {
+    margin-bottom: 40px;
   }
 
   .video__heading-text {
@@ -1176,9 +1204,143 @@ html {
   }
 
   .video__slider {
-    grid-template-rows: repeat(2, 211px);
+    grid-template-rows: repeat(2, 205px);
     height: 714px;
+    row-gap: 40px;
   }
 
-  .video__slider-item iframe {}
+  .video__slider-nav {
+    margin-top: 30px;
+  }
+}
+
+// ===============================GALLERY==============================================
+// ===============================1100px==============================================
+@media (max-width: 1100px) {
+  .gallery {
+    padding-top: 60px;
+  }
+
+  .gallery__inner {
+    height: 1400px;
+  }
+
+  .gallery__colum-one {
+    margin-top: 60px;
+  }
+
+}
+
+// ===============================TICKETS==============================================
+// ===============================1100px==============================================
+@media (max-width: 1100px) {
+  .tickets__inner {
+    padding: 60px 0;
+  }
+
+  .tickets__img-box {
+    width: 700px;
+    height: 440px;
+    overflow: hidden;
+    margin-right: 80px;
+
+    & img {
+      object-fit: cover;
+    }
+  }
+
+  .tickets__type {
+    display: none;
+  }
+
+  .tickets__form {
+
+    justify-content: space-between;
+    width: auto;
+  }
+
+  .tickets__form-amount {
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .tickets__count-label {
+    margin-left: 0;
+    margin: 29px 0 9px 0;
+  }
+
+  .tickets__form-total {
+    text-align: start;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tickets__form-cost {
+    padding-right: 10px;
+  }
+
+  .tickets__count-box {
+    width: 175px;
+    margin: 0;
+  }
+
+  .tickets__button {
+    margin-top: 69px;
+  }
+}
+
+// ===============================CONTACTS==============================================
+// ===============================1100px==============================================
+@media (max-width: 1100px) {
+  .contacts {
+    padding: 60px 0;
+  }
+
+  .contacts__map-box img {
+    width: 694px;
+    height: 454px;
+  }
+
+  .contacts__content-heading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
+  .contacts__list {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .contacts__list-item {
+    margin-bottom: 14px;
+  }
+}
+
+// ===============================FOOTER==============================================
+// ===============================1100px==============================================
+@media (max-width: 1100px) {
+  .footer__top-inner {
+    padding: 65px 0 50px;
+  }
+.footer__logo-box{
+  margin-top: 2px;
+}
+  .footer__nav {
+    margin: 0 98px 0 39px;
+
+  }
+
+  .footer__nav-list {
+    column-gap: 122px;
+  }
+
+  .footer__nav-item {
+    font-weight: 100;
+  }
+
+  .footer__social-list {
+    margin-bottom: 0;
+  }
 }
