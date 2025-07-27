@@ -9,6 +9,7 @@
   <link rel="icon" href="src/favicon/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="src/favicon/favicon.png" type="image/png">
 </head>
+
 <body>
   <header class="header">
     <div class="container">
@@ -21,7 +22,8 @@
           </svg>
           <h1>Louvre</h1>
         </a>
-        <nav class="header__nav">
+        <button class="header__burger"><span class="header__burger-line"></span></button>
+        <nav class="header__nav ">
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a class="header__nav-link" href="#Visiting">Visiting</a>
@@ -243,33 +245,28 @@
           </div>
           <ul class="video__slider">
             <li class="video__slider-item">
-              <iframe width="1440" height="735" src="https://www.youtube.com/embed/zp1BXPX8jcU?si=-HuGKcvgsutm0lKJ"
+              <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU?si=-HuGKcvgsutm0lKJ" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </li>
+            <li class="video__slider-item">
+              <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=NDBWKb5lMGB1Lu0Q" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </li>
+            <li class="video__slider-item">
+              <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=S88S0sTo3xjv6kvP&amp;controls=0"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </li>
             <li class="video__slider-item">
-              <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=NDBWKb5lMGB1Lu0Q"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </li>
-            <li class="video__slider-item">
-              <iframe width="452" height="254"
-                src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=S88S0sTo3xjv6kvP&amp;controls=0"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </li>
-            <li class="video__slider-item">
-              <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY?si=Ll2-Ox9ikvsIuvc6"
-                title="YouTube video player"
+              <iframe src="https://www.youtube.com/embed/NOhDysLnTvY?si=Ll2-Ox9ikvsIuvc6" title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </li>
             <li class="video__slider-item video__slider-item--none">
-              <iframe width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE?si=eC7yLr5MHBo4757w"
-                title="YouTube video player"
+              <iframe src="https://www.youtube.com/embed/2OR0OCr6uRE?si=eC7yLr5MHBo4757w" title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </li>
@@ -319,8 +316,7 @@
               <li class="gallery__immage">
                 <img src="src/images/gallery/galery11.jpg" alt="painting">
               </li>
-            </ul>
-            <ul class="gallery__colum-two">
+
               <li class="gallery__immage">
                 <img src="src/images/gallery/galery1.jpg" alt="painting">
               </li>
@@ -336,8 +332,7 @@
               <li class="gallery__immage">
                 <img src="src/images/gallery/galery13.jpg" alt="painting">
               </li>
-            </ul>
-            <ul class="gallery__colum-three">
+
               <li class="gallery__immage">
                 <img src="src/images/gallery/galery7.jpg" alt="painting">
               </li>
@@ -385,16 +380,16 @@
               </div>
               <div class="tickets__amount">
                 <h4 class="tickets__form-amount">Amount</h4>
-                <label class="tickets__count-label" for="tickets-count-basic">Basic 18+</label>
+                <label class="tickets__count-label" for="tickets-count">Basic 18+</label>
                 <div class="tickets__count-box">
                   <button class="tickets__btn-minus" type="button"></button>
-                  <input class="tickets__number" id="tickets-count-basic" type="number" min="0" max="20" value="1" readonly>
+                  <input class="tickets__number" id="tickets-count" type="number" min="0" max="20" value="1" readonly>
                   <button class="tickets__btn-plus" type="button"></button>
                 </div>
-                <label class="tickets__count-label" for="tickets-count-senior">Senior 65+</label>
+                <label class="tickets__count-label" for="tickets-count">Senior 65+</label>
                 <div class="tickets__count-box">
                   <button class="tickets__btn-minus" type="button"></button>
-                  <input class="tickets__number" id="tickets-count-senior" type="number" min="0" max="20" value="1" readonly>
+                  <input class="tickets__number" id="tickets-count" type="number" min="0" max="20" value="1" readonly>
                   <button class="tickets__btn-plus" type="button"></button>
                 </div>
                 <div class="tickets__form-total">Total €<span class="tickets__form-cost">220</span></div>
@@ -412,7 +407,7 @@
           <h2 class="contacts__heading hrading heading--gold">Contacts</h2>
           <div class="contacts__heading-line heading-line"></div>
           <div class="contacts__content">
-            <div>
+            <div class="contacts__content-info">
               <h4 class="contacts__content-heading">Palais Royal Musee du Louvre</h4>
               <ul class="contacts__list">
                 <li class="contacts__list-item">address:
@@ -517,3 +512,5 @@
     </div>
   </footer>
 </body>
+<script src="src/js/main.js"></script>
+</html>
