@@ -23,7 +23,7 @@
           <h1>Louvre</h1>
         </a>
         <button class="header__burger"><span class="header__burger-line"></span></button>
-        <nav class="header__nav ">
+        <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a class="header__nav-link" href="#Visiting">Visiting</a>
@@ -43,6 +43,11 @@
             <li class="header__nav-item">
               <a class="header__nav-link" href="#Contacts">Contacts</a>
             </li>
+          </ul>
+          <ul class="header__nav-gallery">
+            <li class="heder__nav-gallery-item"></li>
+            <li class="heder__nav-gallery-item"></li>
+            <li class="heder__nav-gallery-item"></li>
           </ul>
         </nav>
       </div>
@@ -64,16 +69,16 @@
             <li class="welcome__slider-item">
               <img src="src/images/welcome/1.jpg" alt="imade_1">
             </li>
-            <li class="welcome__slider-item welcome__slider-item--none">
+            <li class="welcome__slider-item">
               <img src="src/images/welcome/2.jpg" alt="imade_2">
             </li>
-            <li class="welcome__slider-item welcome__slider-item--none">
+            <li class="welcome__slider-item">
               <img src="src/images/welcome/3.jpg" alt="imade_3">
             </li>
-            <li class="welcome__slider-item welcome__slider-item--none">
+            <li class="welcome__slider-item">
               <img src="src/images/welcome/4.jpg" alt="imade_4">
             </li>
-            <li class="welcome__slider-item welcome__slider-item--none">
+            <li class="welcome__slider-item">
               <img src="src/images/welcome/5.jpg" alt="imade_5">
             </li>
           </ul>
@@ -386,10 +391,10 @@
                   <input class="tickets__number" id="tickets-count" type="number" min="0" max="20" value="1" readonly>
                   <button class="tickets__btn-plus" type="button"></button>
                 </div>
-                <label class="tickets__count-label" for="tickets-count">Senior 65+</label>
+                <label class="tickets__count-label" for="tickets-count-basic">Senior 65+</label>
                 <div class="tickets__count-box">
                   <button class="tickets__btn-minus" type="button"></button>
-                  <input class="tickets__number" id="tickets-count" type="number" min="0" max="20" value="1" readonly>
+                  <input class="tickets__number" id="tickets-count-senior" type="number" min="0" max="20" value="1" readonly>
                   <button class="tickets__btn-plus" type="button"></button>
                 </div>
                 <div class="tickets__form-total">Total €<span class="tickets__form-cost">220</span></div>
@@ -511,6 +516,6 @@
       </div>
     </div>
   </footer>
+  <script src="src/js/main.js"></script>
 </body>
-<script src="src/js/main.js"></script>
 </html>
