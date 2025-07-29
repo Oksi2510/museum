@@ -39,6 +39,16 @@ html {
     font-size: 40px;
     line-height: 60px;
   }
+
+  @media (max-width: 675px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .heading--gold {
@@ -788,6 +798,7 @@ html {
     height: 50px;
     background-color: #000;
     color: #FFF;
+    font-family: Roboto;
     font-size: 22px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -809,7 +820,7 @@ html {
   margin: 0;
 }
 
-// ===============================TICKETS==============================================
+// ===============================PARALLAX==============================================
 .parallax {
   position: relative;
   height: 400px;
@@ -834,14 +845,14 @@ html {
     justify-content: space-between;
 
     &-info {
-      width: 274px;
+      max-width: 274px;
     }
 
     &-heading {
       font-size: 28px;
       font-weight: 500;
       margin-bottom: 50px;
-      width: 200px;
+      width: 215px;
     }
   }
 
@@ -906,6 +917,8 @@ html {
     &-list {
       display: grid;
       grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(3, auto);
+      grid-auto-flow: column;
       column-gap: 169px;
       row-gap: 25px;
     }
@@ -1125,11 +1138,47 @@ html {
     height: 110px;
   }
 
+  .header__nav {
+    height: 350px;
+    top: 109px;
+    height: 861px;
+  }
+
   .header__nav--open {
     height: 350px;
     top: 109px;
     width: 100%;
     height: 861px;
+  }
+}
+
+// ===============================HEADER==============================================
+// ===============================675px==============================================
+@media (max-width: 675px) {
+  .header__nav {
+    height: 602px;
+  }
+
+  .header__nav--open {
+    height: 602px;
+  }
+}
+
+// ===============================HEADER==============================================
+// ===============================420px==============================================
+@media (max-width: 420px) {
+  .header__logo h1 {
+    display: none;
+  }
+
+  .header__nav {
+    top: 91px;
+    height: 543px;
+  }
+
+  .header__nav--open {
+    height: 543px;
+    top: 91px;
   }
 }
 
@@ -1143,7 +1192,7 @@ html {
   }
 
   .welcome__slider-item {
-    margin-left: 215px;
+    margin-left: 300px;
   }
 
   .welcome__slider-item img {
@@ -1222,8 +1271,6 @@ html {
   .welcome__slider-item img {
     width: auto;
     max-height: 546px;
-    object-fit: cover;
-    object-position: 50% 50%;
   }
 
 
@@ -1269,8 +1316,120 @@ html {
   .welcome__slider-item::before {
     background: none;
   }
+}
 
+// ===============================WELCOME==============================================
+// ===============================675px==============================================
+@media (max-width: 675px) {
+  .welcome__slider {
+    max-width: 100%;
+    height: 285px;
+  }
 
+  .welcome__slider-item {
+    width: 380px;
+    height: 285px;
+    margin-right: 500px;
+
+    & img {
+      height: 480px;
+    }
+  }
+}
+
+// ===============================WELCOME==============================================
+// ===============================421px==============================================
+@media (max-width: 421px) {
+  .header__inner {
+    height: 90px;
+  }
+
+  .welcome__box-heading {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .welcome__box-text {
+    font-size: 16px;
+    margin-bottom: 51px;
+  }
+
+  .welcome__slider-item {
+
+    & img {
+      height: 285px;
+      width: 380px;
+    }
+  }
+
+  .welcome__slider-num {
+    font-size: 15px;
+    margin-right: 0;
+
+    & span {
+      height: 13px;
+      margin: 0 5px;
+    }
+  }
+
+  .welcome__slider-dot {
+    width: 7px;
+    height: 7px;
+    margin-right: 10px;
+  }
+
+  .welcome__slider-dots {
+    margin: 0 26px 0 28px;
+  }
+
+  .welcome__slider-arrow--prev {
+    margin-left: 0;
+  }
+
+  .welcome__slider-arrow--prev svg {
+    width: 20px;
+    margin-left: 0;
+  }
+
+  .welcome__slider-arrow--next {
+    margin-left: 15px;
+  }
+
+  .welcome__slider-arrow--next svg {
+    width: 20px;
+  }
+
+  .welcome__slider-info {
+    height: 80px;
+  }
+
+  .header__logo {
+    & h1 {
+      font-size: 16px;
+    }
+
+    & svg {
+      transform: scale(0.6);
+      margin-right: 10px;
+    }
+  }
+
+  .header__logo {
+    align-items: center;
+    margin: 30px 0;
+  }
+}
+
+// ===============================WELCOME==============================================
+// ===============================400px==============================================
+@media (max-width: 400px) {
+  .welcome__box-heading {
+    font-size: 25px;
+  }
+
+  .welcome__box-text {
+    font-size: 10px;
+  }
 }
 
 // ===============================VISITING==============================================
@@ -1343,6 +1502,16 @@ html {
     row-gap: 40px;
     margin: 0 50px;
   }
+
+  .visiting__card-heading {
+    font-size: 18px;
+    letter-spacing: 5px;
+  }
+
+  .visiting__card-info {
+    font-size: 16px;
+  }
+
 }
 
 // ===============================EXPLORE==============================================
@@ -1407,10 +1576,6 @@ html {
   }
 }
 
-// ===============================EXPLORE==============================================
-// ===============================675px==============================================
-@media (max-width: 675px) {}
-
 // ===============================VIDEO==============================================
 // ===============================1100px==============================================
 @media (max-width: 1100px) {
@@ -1460,9 +1625,16 @@ html {
     margin-top: 10px;
   }
 
-  .video__slider-dots {
-    transform: scale(0.94);
+  .video__dot {
+    width: 8px;
+    height: 8px;
   }
+
+  .video__slider-arrow--prev svg,
+  .video__slider-arrow--next svg {
+    width: 8px;
+  }
+
 
   .video__slider-item:first-child {
     grid-column: span 2;
@@ -1472,6 +1644,33 @@ html {
   .video__slider-item:nth-of-type(4) {
     display: none;
   }
+}
+
+// ===============================VIDEO==============================================
+// ===============================421px==============================================
+@media (max-width: 421px) {
+  .video__slider {
+    grid-template-rows: 225px 102px;
+    height: 385px;
+  }
+
+  .video__slider-item:first-child {
+    grid-row: span 1;
+  }
+
+  .video__slider-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video {
+    padding: 35px 0 27px;
+  }
+
+  .video__slider {
+    row-gap: 39px;
+  }
+
 }
 
 // ===============================GALLERY==============================================
@@ -1511,7 +1710,14 @@ html {
       padding-top: 0;
     }
   }
+}
 
+// ===============================GALLERY==============================================
+// ===============================421px==============================================
+@media (max-width: 421px) {
+  .gallery__inner {
+    height: 717px;
+  }
 }
 
 // ===============================TICKETS==============================================
@@ -1608,6 +1814,69 @@ html {
   }
 }
 
+// ===============================TICKETS==============================================
+// ===============================675px==============================================
+@media (max-width: 675px) {
+  .tickets__content {
+    flex-direction: column;
+  }
+
+  .tickets__img-box {
+    width: 100%;
+    height: 160px;
+    display: flex;
+  }
+
+  .tickets__form {
+    justify-content: center;
+  }
+
+  .tickets__form-amount {
+    text-align: center;
+  }
+
+  .tickets__form-cost {
+    padding: 0;
+  }
+
+  .tickets__count-label {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .tickets__count-label {
+    margin: 25px 0 15px 0;
+  }
+
+  .tickets__button {
+    font-size: 16px;
+  }
+}
+
+// ===============================TICKETS==============================================
+// ===============================421px==============================================
+@media (max-width: 421px) {
+  .tickets__form-amount {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .tickets__img-box {
+    margin-bottom: 40px;
+  }
+
+  .tickets__count-label {
+    margin: 21px 0 15px 0;
+  }
+
+  .tickets__form-total {
+    font-size: 16px;
+    justify-content: center;
+    letter-spacing: 0.6px;
+    margin-top: 39px;
+  }
+}
+
 // ===============================PARALLAX==============================================
 // ===============================800px==============================================
 .parallax {
@@ -1668,6 +1937,35 @@ html {
 
   .contacts__list-item {
     font-size: 18px;
+  }
+}
+
+// ===============================CONTACTS==============================================
+// ===============================675px==============================================
+@media (max-width: 675px) {
+  .contacts__content-heading {
+    width: 135px;
+    font-size: 16px;
+  }
+
+  .contacts__list-link {
+    font-size: 16px;
+  }
+}
+
+// ===============================CONTACTS==============================================
+// ===============================421px==============================================
+@media (max-width: 421px) {
+  .contacts {
+    padding: 40px 0 39px;
+  }
+
+  .contacts__list-item {
+    font-size: 16px;
+  }
+
+  .contacts__list-item {
+    margin-bottom: 16px;
   }
 }
 
@@ -1738,5 +2036,69 @@ html {
 
   .footer__bottom-inner {
     padding: 41px 0;
+  }
+
+  .footer__logo-box {
+    margin-bottom: 40px;
+  }
+}
+
+// ===============================FOOTER==============================================
+// ===============================675px==============================================
+@media (max-width: 675px) {
+  .footer__top-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 0 34px;
+  }
+
+  .footer__logo-box {
+    margin-bottom: 30px;
+  }
+
+  .footer__logo-link {
+    font-family: Forum;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    & svg {
+      transform: scale(0.6);
+      margin-right: 0;
+    }
+  }
+
+  .footer__nav {
+    margin-right: 0;
+  }
+
+  .footer__nav-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 60px;
+  }
+
+  .footer__social-list {
+    margin: 43px auto 7px;
+  }
+
+  .footer__social-item {
+    margin-right: 5px;
+  }
+
+  .copyright-company {
+    display: none;
+  }
+
+  .footer__bottom-inner {
+    font-size: 16px;
+  }
+}
+
+// ===============================FOOTER==============================================
+// ===============================400px==============================================
+@media (max-width: 400px) {
+  .footer__nav-list {
+    column-gap: 15px;
   }
 }
