@@ -295,9 +295,11 @@ html {
   overflow: hidden;
   width: 1000px;
   margin-left: auto;
+  transition: all 0.3s;
 }
 .welcome__slider-item {
   position: relative;
+  transition: all 0.3s;
 }
 .welcome__slider-item::before {
   content: "";
@@ -308,6 +310,7 @@ html {
 }
 .welcome__slider-item--none {
   display: none;
+  transition: all 0.3s;
 }
 .welcome__slider-info {
   display: flex;

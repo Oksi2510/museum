@@ -201,9 +201,11 @@ html {
     overflow: hidden;
     width: 1000px;
     margin-left: auto;
+    @include trn;
 
     &-item {
       position: relative;
+      @include trn;
 
 
       &::before {
@@ -218,6 +220,7 @@ html {
 
       &--none {
         display: none;
+        @include trn;
       }
     }
 
