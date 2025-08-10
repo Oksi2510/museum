@@ -844,6 +844,9 @@ html {
   height: 100%;
   /* или 100vh */
   overflow-y: auto;
+  &--open{
+    display: block;
+  }
 
 
   &__close {

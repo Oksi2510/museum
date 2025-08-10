@@ -437,23 +437,18 @@
                 <h4 class="tickets__form-amount">Amount</h4>
                 <label class="tickets__count-label" for="tickets-count">Basic 18+</label>
                 <div class="tickets__count-box">
-                  <button class="tickets__btn-minus" type="button"
-                    onclick="this.nextElementSibling.stepDown()"></button>
-                  <input class="tickets__number" id="tickets-count" type="number" min="0" max="20" value="1" readonly>
-                  <button class="tickets__btn-plus" type="button"
-                    onclick="this.previousElementSibling.stepUp()"></button>
+                  <button class="tickets__btn-minus" type="button"></button>
+                  <input class="tickets__number" id="basic" type="number" min="0" max="20" value="0" readonly>
+                  <button class="tickets__btn-plus" type="button"></button>
                 </div>
                 <label class="tickets__count-label" for="tickets-count-basic">Senior 65+</label>
                 <div class="tickets__count-box">
-                  <button class="tickets__btn-minus" type="button"
-                    onclick="this.nextElementSibling.stepDown()"></button>
-                  <input class="tickets__number" id="tickets-count-senior" type="number" min="0" max="20" value="1"
-                    readonly>
-                  <button class="tickets__btn-plus" type="button"
-                    onclick="this.previousElementSibling.stepUp()"></button>
+                  <button class="tickets__btn-minus" type="button"></button>
+                  <input class="tickets__number" id="senior" type="number" min="0" max="20" value="0" readonly>
+                  <button class="tickets__btn-plus" type="button"></button>
                 </div>
-                <div class="tickets__form-total">Total €<span class="tickets__form-cost">220</span></div>
-                <button class="tickets__button">Buy Now</button>
+                <div class="tickets__form-total">Total €<span class="tickets__form-cost">0</span></div>
+                <button class="tickets__button" type="button">Buy Now</button>
               </div>
             </form>
           </div>
@@ -472,37 +467,34 @@
             <div class="payment__line payment__line-booking">Tour to Louvre<span></span></div>
             <div class="payment__input-line">
               <input class="payment__input payment__input-date" id="data" type="date" placeholder="Date" required>
-              <input class="payment__input payment__input-time" id="time" type="time" placeholder="Time" required>
+              <input class="payment__input payment__input-time" id="time" type="time" placeholder="Time" min="09:00"
+                max="20:00" required>
             </div>
             <input class="payment__input payment__input-name" id="name" type="text" placeholder="Name" required>
             <input class="payment__input payment__input-mail" id="mail" type="email" placeholder="E-mail" required>
             <input class="payment__input payment__input-phone" id="phone" type="number" placeholder="Phone" required>
             <select class="payment__input payment__input-type" id="type" name="type">
               <option value="">Ticket Type</option>
-              <option value="Permanent">Permanent exhibition</option>
-              <option value="Temporary">Temporary exhibition</option>
-              <option value="Combined">Combined Admission</option>
+              <option value="Permanent exhibition">Permanent exhibition</option>
+              <option value="Temporary exhibition">Temporary exhibition</option>
+              <option value="Combined Admission">Combined Admission</option>
             </select>
             <div class="payment__input payment__input-count-tiket">
               <div class="payment__line-count payment__line">Entry ticket<span></span></div>
               <div class="payment__input-line">
                 <label for="basic">Basic 18+ (20 €)</label>
                 <div class="payment__count">
-                  <button class="payment__count-minus" type="button"
-                    onclick="this.nextElementSibling.stepDown()"><span></span></button>
-                  <input id="basic" type="number" min="0" max="20" value="0" readonly class="number">
-                  <button class="payment__count-plus" type="button"
-                    onclick="this.previousElementSibling.stepUp()"><span></span></button>
+                  <button class="payment__count-minus" type="button"><span></span></button>
+                  <input id="basicPayment" type="number" min="0" max="20" value="0" readonly class="number">
+                  <button class="payment__count-plus" type="button"><span></span></button>
                 </div>
               </div>
               <div class="payment__input-line">
                 <label for="senior">Senior 65+ (10 €)</label>
                 <div class="payment__count">
-                  <button class="payment__count-minus" type="button"
-                    onclick="this.nextElementSibling.stepDown()"><span></span></button>
-                  <input id="senior" type="number" min="0" max="20" value="0" readonly class="number">
-                  <button class="payment__count-plus" type="button"
-                    onclick="this.previousElementSibling.stepUp()"><span></span></button>
+                  <button class="payment__count-minus" type="button"><span></span></button>
+                  <input id="seniorPayment" type="number" min="0" max="20" value="0" readonly class="number">
+                  <button class="payment__count-plus" type="button"><span></span></button>
                 </div>
               </div>
             </div>
@@ -536,7 +528,7 @@
             <div class="payment__tiket-total">
               <div class="payment__tiket-cost">
                 <div>Total:</div>
-                <div><span>0</span>€</div>
+                <div class="payment__total-price"><span>0</span>€</div>
               </div>
               <form class="payment__tiket-card" action="">
                 <div class="payment__tiket-card-front">

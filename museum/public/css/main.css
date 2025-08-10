@@ -819,6 +819,9 @@ html {
   /* или 100vh */
   overflow-y: auto;
 }
+.payment--open {
+  display: block;
+}
 .payment__close {
   position: fixed;
   top: 30px;
