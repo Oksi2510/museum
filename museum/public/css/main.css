@@ -824,7 +824,7 @@ html {
 .payment__close {
   position: absolute;
   top: -40px;
-  left: 1145px;
+  right: 0;
   display: block;
   width: 25px;
   height: 25px;
@@ -1233,9 +1233,10 @@ html {
 .contacts__list-link:hover {
   color: #9d8665;
 }
-.contacts__map-box img {
+.contacts__map-box {
   width: 100%;
-  height: 100%;
+  height: 620px;
+  margin-left: 200px;
 }
 
 .footer__top {
@@ -2077,6 +2078,7 @@ html {
   }
   .contacts__map-box {
     margin-left: 25px;
+    max-height: 454px;
   }
   .contacts__content-heading {
     font-size: 24px;
@@ -2119,6 +2121,9 @@ html {
   }
   .contacts__list-link {
     font-size: 16px;
+  }
+  .contacts__map-box {
+    max-height: 248px;
   }
 }
 @media (max-width: 421px) {
